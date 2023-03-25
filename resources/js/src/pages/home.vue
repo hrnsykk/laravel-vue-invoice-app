@@ -2,7 +2,7 @@
     <div>
         hier is home page
 
-        <router-link to="/admin">Go Admin</router-link>
+        <router-link to="/admin" class="">Go Admin</router-link>
     </div>
 </template>
 
