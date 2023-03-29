@@ -123,7 +123,7 @@ const login = async () => {
             if (response.data.success) {
                 console.log(response.data.data.token);
                 localStorage.setItem("token", response.data.data.token);
-                router.push("/admin");
+                router.push("/");
             } else {
                 login_error.status = true;
                 login_error.messages = response.data.message;
