@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ProductController;
 use App\Models\Invoice;
 use App\Models\InvoiceItem;
@@ -28,9 +29,8 @@ Route::controller(AuthController::class)->group(function () {
     Route::post('register', 'register');
 });
 
-
 Route::resource("/product", ProductController::class);
-
+Route::resource("/category", CategoryController::class);
 
 Route::get("/invoice/{id}", function ($id) {
     // $data = Invoice::find($id)->items()->get();  Get Only Invoices Items
